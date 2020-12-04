@@ -16,6 +16,7 @@ public class PlayerMotor : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        CameraCheck();
     }
 
     public void Move(Vector3 _velocity)
@@ -45,6 +46,21 @@ public class PlayerMotor : MonoBehaviour
         if (cam)
         {
             cam.transform.Rotate(-cameraRotation);
+        }
+    }
+
+    private bool CameraCheck()
+    {
+        Camera _cam;
+        if (!cam)
+        {
+            _cam = transform.GetComponentInChildren<Camera>();
+            return cam = _cam;
+        }
+        else
+        {
+            Debug.LogWarning("<color=yellow>No camera found in " + this.name + "</color>");
+            return _cam = null;
         }
     }
 

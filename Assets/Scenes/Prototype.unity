@@ -743,4 +743,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98720945134f4204cb0479d432e110e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 1531456531}
+  cam: {fileID: 0}
